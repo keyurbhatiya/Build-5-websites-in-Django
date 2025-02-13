@@ -1,0 +1,232 @@
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heading */
+h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+/* Todo Wrapper */
+.TodoWrapper {
+  background-color: #252525;
+  margin-top: 50px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+/* Todo Form */
+.TodoForm {
+  width: 100%;
+}
+
+/* Input Field */
+.todo-input {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 2rem 0;
+  background: none;
+  border: 1px solid #8758ff;
+  color: #fff;
+  outline: none;
+}
+
+.todo-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Button */
+.todo-btn {
+  background: #8758ff;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.todo-btn:hover {
+  box-shadow: 0 0 10px #8758ff;
+}
+
+/* Todo Item */
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 0, 0.66);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 20px 10px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Scrollable Area */
+.scr {
+  overflow-y: auto;
+}
+
+/* Hide Scrollbar */
+.scr::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Icons */
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+/* Completed Todo */
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+}
+
+/* Anchor Links */
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 10px;
+}
+
+/* Dynamic Todo Colors */
+.todo-green {
+  background-color: green;
+}
+
+.todo-red {
+  background-color: red;
+}
+
+/* Additional Text Styles */
+.anca {
+  font-size: 25px;
+  margin-top: 7px;
+  margin-right: -41px;
+}
+
+/* Header Layout */
+.heads {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Basic reset and font import */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+
+.signup-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-green {
+  background-color: #d4edda;
+}
+
+.todo-red {
+  background-color: #f8d7da;
+}
+
+.todo h5 {
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+.todo p {
+  flex-grow: 1;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.todo i {
+  cursor: pointer;
+}
+
+.todo i:hover {
+  color: #007bff;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.todo-actions a {
+  color: #333;
+  text-decoration: none;
+}
+
+.todo-actions a:hover {
+  color: #007bff;
+}

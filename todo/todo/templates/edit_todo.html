@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/cb792c0850.js" crossorigin="anonymous"></script>
+    <style>
+        /* Basic reset and font import */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 50px;
+        }
+
+        .signup-login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .heading {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .todo-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        .todo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .todo-green {
+            background-color: #d4edda;
+        }
+
+        .todo-red {
+            background-color: #f8d7da;
+        }
+
+        .todo h5 {
+            font-size: 1.2rem;
+            margin-right: 20px;
+        }
+
+        .todo p {
+            flex-grow: 1;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        .todo i {
+            cursor: pointer;
+        }
+
+        .todo i:hover {
+            color: #007bff;
+        }
+
+        .todo-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .todo-actions a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .todo-actions a:hover {
+            color: #007bff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-login">
+        <div class="signup-box scr">
+            <div class="heading">Get Things Done?</div>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="title" required class="todo-input inp" placeholder="What is the task today?" value="{{ obj.title }}">
+                <input type="hidden" name="srno" value="{{ obj.srno }}">
+                <input class="submit-button" type="submit" value="Update Task">
+            </form>
+
+            {% for todo in res %}
+            <div class="todo {% if todo.status %}todo-green{% else %}todo-red{% endif %}">
+                <div class="todo-info">
+                    <h5>{{ todo.srno }}</h5>
+                    <p>{{ todo.title }}</p>
+                </div>
+                <div class="todo-actions">
+                    <a href="#"><i class="fas fa-pen-to-square"></i></a>
+                    <a href="/delete_todo/{{ todo.srno }}"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="{% static 'js/todo.js' %}"></script>
+</body>
+
+</html>

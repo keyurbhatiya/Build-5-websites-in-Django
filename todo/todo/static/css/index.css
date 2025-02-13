@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f1f37;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Signup/Login Box */
+.signup-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 650px;
+  width: 520px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+b {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* Input Fields */
+.inp {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.inp::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #252525;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #ffff00bc;
+  color: #fff;
+}
+
+/* Separator Line */
+.line {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+  background-color: #ffffff;
+}
+
+/* Links */
+.anc {
+  text-decoration: none;
+  color: #ffff00bc;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.anc:hover {
+  color: #fff;
+}
+
+/* Additional Box for Other Content */
+.signup-box1 {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 555px;
+  width: 520px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Icons and Links */
+.anca, .ancaa {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+}
